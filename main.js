@@ -1,5 +1,6 @@
 let submitButton = document.querySelector(".submit-button");
 let inputField = document.getElementById("text-input");
+let chatField = document.querySelector("chatbot-window");
 
 submitButton.addEventListener("click", function() {
   let sessionID = null;
@@ -8,7 +9,7 @@ submitButton.addEventListener("click", function() {
     let formData = new FormData();
     formData.append("input", inputField.value);
 
-    request.open("POST", "skript.php", TextTrackCue);
+    request.open("POST", "requestscript.php", TextTrackCue);
     if(sessionID !== null) {
       formData.append("session_id", sessionID);
     }
@@ -18,7 +19,7 @@ submitButton.addEventListener("click", function() {
       if(this.readyState == XMLHttpRequest.DONE) {
         if(this.status === 200) {
           response = JSON.parse(this.responseText);
-          
+          chatField.innerHTML = response;
         } else {
           console.log("Request failed!");
         }
@@ -30,5 +31,5 @@ submitButton.addEventListener("click", function() {
 });
 
 function createChatField() {
-  
+
 }
