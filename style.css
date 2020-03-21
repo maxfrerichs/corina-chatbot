@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Roboto Light';
+  src: url("fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url("fonts/Roboto-Regular.ttf");
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+}
+
+.app-bar {
+  background: #202020;
+  position: fixed;
+  height: 72px;
+  width: 100%;
+}
+
+
+.app-container {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+
+.input-container {
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  bottom: 60px;
+  justify-content: space-around;
+  display: flex;
+  position: relative;
+  width: 100%;
+  /* height: inherit; */
+}
+
+.input-field {
+  width: 90%;
+  height: 54px;
+  border: 1px solid;
+  border-radius: 5px;
+  /* margin: auto; */
+}
+
+.icon-general {
+  width: 48px;
+  height: 48px;
+  /* color: #fff; */
+  /* background-color: #fff; */
+}
+
+.btn-text {
+  margin: 0;
+  color: #fff;
+  font-size: 27px;
+}
+
+.chat-container {
+  position: absolute;
+  bottom: 0;
+}
+
+.submit-button {
+  font-family: "Roboto Light";
+  align-items: center;
+  display: flex;
+  border: #160D2F;
+  height: 58px;
+  width: 160px;
+  border-radius: 5px;
+  /* margin: auto; */
+  background-color: #160D2F;
+}
