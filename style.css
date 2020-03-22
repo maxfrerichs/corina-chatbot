@@ -56,6 +56,33 @@ body {
   width: 100%;
 }
 
+.suggestion-head {
+  width: 100%;
+  margin: 6px;
+  font-family: "Roboto Light";
+  font-size: 26px;
+}
+
+.suggestion-field {
+  width: fit-content;
+  height: fit-content;
+  background: #160D2F;
+  margin: 6px;
+  padding: 6px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 26px;
+  font-family: "Roboto Light";
+}
+
+.suggestion-row {
+  width: 90%;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 0px;
+}
+
 .avatar {
   margin-left: 12px;
 }
