@@ -65,8 +65,13 @@ submitButton.addEventListener("click", function() {
          console.log(this.responseText);
           response = JSON.parse(this.responseText);
           console.log(response);
-  
-          createChatField(response.output.generic[0].text, "answer");
+          if(response.output.generic[0].response_type == "text") {
+            createChatField(response.output.generic[0].text, "answer");
+          } 
+          if(response.output.generic[0].response_type == "suggestion") {
+            renderSuggestionField();
+            console.log("suggestion detected!")
+          }
           inputField.value = ""
         } else {
           console.log("Request failed!");
@@ -91,6 +96,7 @@ function createChatField(input, chatbubbleType) {
 }
 
 
-function renderSuggestionField() {
-
+function renderSuggestionField(suggestions) {
+  let suggestionField = document.createElement("div");
+  
 }

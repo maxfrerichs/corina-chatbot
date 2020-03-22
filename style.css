@@ -32,11 +32,15 @@
 
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: safe;
   padding: 0;
   margin: 0;
   width: 100vw;
   overflow-y: hidden;
-  height: 97vh;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -53,26 +57,37 @@ body {
   margin-left: 12px;
 }
 
+.avatar-description {
+  font-family: "Roboto Light";
+  font-size: 32px;
+  color: #fff;
+  margin-left: 14px;
+}
+
 .app-container {
-  /* margin-top: 100px; */
-  overflow-y: hidden;
+  height: 100%;
+  margin-top: 72px;
+  overflow-y: scroll;
   position: relative;
   width: inherit;
-  height: inherit;
+  height: 80vh;
 }
 
 
 .input-container {
-  /* padding: 12px; */
+  margin-top: 12px;
   margin: 0 auto;
   /* padding-left: 10px; */
   /* padding-right: 10px; */
-  bottom: 60px;
+  /* bottom: 60px; */
+  align-items: flex-start;
   justify-content: space-between;
   display: flex;
-  position: relative;
-  width: 90%;
-  /* height: inherit; */
+  /* position: relative; */
+  width: 95%;
+  height: 100px;
+  background: #fff;
+  z-index: 20px;
 }
 
 .input-field {
@@ -105,10 +120,11 @@ body {
 }
 
 .chatbot-window {
+  margin: 20px 0px;
   width: 100%;
   overflow-y: scroll;
-  height: 80%;
-  position: absolute;
+  /* height: 86%; */
+  /* position: absolute; */
   align-items: center;
   top: 120px;
   display: flex;
@@ -156,8 +172,19 @@ body {
   }
   .submit-button {
     width: fit-content;
+    margin-left: 2%
+     
   }
   ::-webkit-scrollbar {
     display: none;
+  }
+  .input-field {
+    margin-right: 2%;
+
+  }
+
+  .chatbot-window {
+    /* top: 80px; */
+    height:;
   }
 }
