@@ -1,36 +1,71 @@
 let submitButton = document.querySelector(".submit-button");
 let inputField = document.getElementById("text-input");
-let chatField = document.querySelector("chatbot-window");
+let chatField = document.querySelector(".chatbot-window");
+let sessionID;
+
+window.onload = function() {
+  let request = new XMLHttpRequest();
+  request.open("POST", "session.php", true);
+  request.send();
+  request.onreadystatechange = function() {
+    // 
+    if(this.readyState == XMLHttpRequest.DONE) {
+      if(this.status === 200) {
+       console.log(this.responseText);
+        response = JSON.parse(this.responseText);
+        sessionID = response.session_id;
+        localStorage.setItem("session_id", sessionID)
+        console.log(sessionID); 
+        // chatField.innerHTML = this.responseText;
+      } else {
+        console.log("Request failed!");
+      }
+    }
+  };
+
+}
 
 submitButton.addEventListener("click", function() {
-  let sessionID = null;
   if(typeof(inputField.value) !== undefined ) {
     let request = new XMLHttpRequest();
     let formData = new FormData();
+    sessionID = localStorage.getItem("session_id");
+
     formData.append("input", inputField.value);
 
-    request.open("POST", "requestscript.php", TextTrackCue);
-    if(sessionID !== null) {
-      formData.append("session_id", sessionID);
-    }
-    request.send();
+    formData.append("session_id", sessionID);
+    request.open("POST", "chatbot.php", true);
+    createChatField(inputField.value, "question");
+
+    request.send(formData);
     request.onreadystatechange = function() {
       // 
       if(this.readyState == XMLHttpRequest.DONE) {
         if(this.status === 200) {
          console.log(this.responseText);
-          // response = JSON.parse(this.responseText);
-          // chatField.innerHTML = this.responseText;
+          response = JSON.parse(this.responseText);
+          console.log(response);
+  
+          createChatField(response.output.generic[0].text, "answer");
+          inputField.value = ""
         } else {
           console.log("Request failed!");
         }
       }
     };
   } else {
-    console.log()
+    console.log("sds")
   }
 });
 
-function createChatField() {
-
+function createChatField(input, chatbubbleType) {
+  let chatBubble = document.createElement("div");
+  if(chatbubbleType === "question") {
+    chatBubble.className = "chatbubble-question"
+  }
+  if(chatbubbleType === "answer") {
+    chatBubble.className = "chatbubble-answer"
+  }
+  chatBubble.innerHTML = input
+  chatField.append(chatBubble);
 }
