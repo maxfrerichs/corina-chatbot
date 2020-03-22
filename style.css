@@ -13,6 +13,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
+  /* overflow-y: hidden; */
   height: 97vh;
   overflow-x: hidden;
 }
@@ -26,6 +27,7 @@ body {
 
 
 .app-container {
+  /* overflow-y: scroll; */
   position: relative;
   width: inherit;
   height: inherit;
@@ -69,6 +71,17 @@ body {
   bottom: 0;
 }
 
+.chatbot-window {
+  overflow-y: scroll;
+  height: 80%;
+  position: absolute;
+  align-items: center;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Regular";
+}
+
 .submit-button {
   font-family: "Roboto Light";
   align-items: center;
@@ -79,4 +92,20 @@ body {
   border-radius: 5px;
   /* margin: auto; */
   background-color: #160D2F;
+}
+
+
+.chatbubble-question {
+  padding: 12px;
+  width: 80%;
+  height: 100px;
+  background-color: yellow;
+}
+
+.chatbubble-answer {
+  padding: 12px;
+  margin: 20px;
+  width: 80%;
+  height: 100px;
+  background-color: green;
 }
