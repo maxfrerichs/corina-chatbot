@@ -13,13 +13,14 @@ submitButton.addEventListener("click", function() {
     if(sessionID !== null) {
       formData.append("session_id", sessionID);
     }
-
+    request.send();
     request.onreadystatechange = function() {
       // 
       if(this.readyState == XMLHttpRequest.DONE) {
         if(this.status === 200) {
-          response = JSON.parse(this.responseText);
-          chatField.innerHTML = response;
+         console.log(this.responseText);
+          // response = JSON.parse(this.responseText);
+          // chatField.innerHTML = this.responseText;
         } else {
           console.log("Request failed!");
         }
