@@ -27,11 +27,6 @@ WICHTIG: Dieser Client ist NICHT voll funktionsfähig, viel mehr soll er eine Ma
 * generelle Browser-
 * Leichte Sprache funktioniert derzeit nur im standardmäßigen IBM-Chatwidget: Hier findest du eine Demo:        http://94.16.118.98/chatbot/
 
-## Geplante / mögliche Features
-### Backend
-  * Integration eines Crawlers, der Informationen von vertrauenswürdigen Quellen
-  * Eigenes Backend für Redakteure, um Content einzupflegen
-
 ### Setup zum Ausprobieren: 
   * Du willst den Bot weiterentwickeln? Super!
   Voraussetzungen: 
@@ -39,9 +34,14 @@ WICHTIG: Dieser Client ist NICHT voll funktionsfähig, viel mehr soll er eine Ma
   * kompatibler Browser
     1. Klone dir das Repository in das Root-Verzeichnis deines Webservers (i.d.R. /var/www/html)
     2. Rufe im Browser localhost/corina auf
-    3. Fertig
+    3. Fertig!
     
-    Solltest du auf Probleme stoße, würde ich mich sehr freuen, wenn du einen Issue erstellst
+    Solltest du auf Probleme stoße, würde ich mich sehr freuen, wenn du einen Issue erstellst!
+
+## Geplante / mögliche Features
+### Backend
+  * Integration eines Crawlers, der Informationen von vertrauenswürdigen Quellen
+  * Eigenes Backend für Redakteure, um Content einzupflegen
 
 ### Frontend
   * Optimierung der Barrierefreiheit durch Implementierung eines "High Contrast"-Modus
