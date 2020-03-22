@@ -72,6 +72,7 @@ body {
 }
 
 .chatbot-window {
+  width: 100%;
   overflow-y: scroll;
   height: 80%;
   position: absolute;
@@ -98,7 +99,7 @@ body {
 .chatbubble-question {
   padding: 12px;
   width: 80%;
-  height: 100px;
+  height: 120px;
   background-color: yellow;
 }
 
@@ -106,6 +107,12 @@ body {
   padding: 12px;
   margin: 20px;
   width: 80%;
-  height: 100px;
+  height: fit-content;
   background-color: green;
+}
+
+@media screen and(max-width: 768px) {
+  .btn-text {
+    display: none;
+  }
 }
