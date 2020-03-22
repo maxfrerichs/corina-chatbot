@@ -2,6 +2,8 @@ let submitButton = document.querySelector(".submit-button");
 let inputField = document.getElementById("text-input");
 let chatField = document.querySelector(".chatbot-window");
 let sessionID;
+let formData;
+
 
 window.onload = function() {
   let request = new XMLHttpRequest();
@@ -22,7 +24,25 @@ window.onload = function() {
       }
     }
   };
-
+  request.open("POST", "chatbot.php", true);
+  formData = new FormData();
+  formData.append("input", "Hallo");
+  formData.append("session_id", localStorage.getItem("session_id"));
+  request.send(formData);
+  request.onreadystatechange = function() {
+    // 
+    if(this.readyState == XMLHttpRequest.DONE) {
+      if(this.status === 200) {
+       console.log(this.responseText);
+        response = JSON.parse(this.responseText);
+        console.log(response);
+        // createChatField(response.output.generic[0].text, "answer");
+        inputField.value = ""
+      } else {
+        console.log("Request failed!");
+      }
+    }
+  }
 }
 
 submitButton.addEventListener("click", function() {
@@ -68,4 +88,9 @@ function createChatField(input, chatbubbleType) {
   }
   chatBubble.innerHTML = input
   chatField.append(chatBubble);
+}
+
+
+function renderSuggestionField() {
+
 }
