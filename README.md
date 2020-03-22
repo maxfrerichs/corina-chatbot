@@ -3,7 +3,8 @@
 ## Was ist das? 
 Corina ist ein Chatbot, entwickelt um Bürgern Fragen rund um Covid-19 bzw. das Corona-Virus zu beantworten. Das Ziel ist es, 
 so vielen Bürgern wie möglich Zugang zu Informationen zu verschaffen, ohne dabei Notruf-Leitungen oder Info-Hotlines zu
-überlasten
+überlasten. Dieser Client verwendet die IBM Watson Assistant API und hat einen besonderen Fokus auf Barrierefreiheit.
+WICHTIG: Dieser Client ist NICHT voll funktionsfähig, viel mehr soll er eine Machbarkeitstudie darstellen
 
 ## Was wurde verwendet? 
 
@@ -23,6 +24,7 @@ so vielen Bürgern wie möglich Zugang zu Informationen zu verschaffen, ohne dab
 ## Probleme
 * Aktuell gibt es Probleme beim Deployment auf einem öffentlich zugänglichen Server (siehe Issue). Auf einem lokalen Server     läuft der Client aber problemlos. 
 * Tastennavigation nicht optimal.
+* Leichte Sprache funktioniert derzeit nur im standardmäßigen IBM-Chatwidget: Hier findest du eine Demo:        http://94.16.118.98/chatbot/
 
 ## Geplante / mögliche Features
 ### Backend
