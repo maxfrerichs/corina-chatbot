@@ -8,26 +8,54 @@
   src: url("fonts/Roboto-Regular.ttf");
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202020
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}
+
+
 
 body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   height: 97vh;
   overflow-x: hidden;
 }
 
 .app-bar {
+  display: flex;
+  align-items: center;
   background: #202020;
   position: fixed;
   height: 72px;
   width: 100%;
 }
 
+.avatar {
+  margin-left: 12px;
+}
 
 .app-container {
-  /* overflow-y: scroll; */
+  /* margin-top: 100px; */
+  overflow-y: hidden;
   position: relative;
   width: inherit;
   height: inherit;
@@ -35,18 +63,23 @@ body {
 
 
 .input-container {
+  /* padding: 12px; */
+  margin: 0 auto;
   /* padding-left: 10px; */
   /* padding-right: 10px; */
   bottom: 60px;
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
   position: relative;
-  width: 100%;
+  width: 90%;
   /* height: inherit; */
 }
 
 .input-field {
-  width: 90%;
+  padding-left: 12px;
+  width: 79%;
+  font-family: "Roboto Regular";
+  font-size: 30px;
   height: 54px;
   border: 1px solid;
   border-radius: 5px;
@@ -77,7 +110,7 @@ body {
   height: 80%;
   position: absolute;
   align-items: center;
-  top: 100px;
+  top: 120px;
   display: flex;
   flex-direction: column;
   font-family: "Roboto Regular";
@@ -86,6 +119,7 @@ body {
 .submit-button {
   font-family: "Roboto Light";
   align-items: center;
+  justify-content: space-evenly;
   display: flex;
   border: #160D2F;
   height: 58px;
@@ -98,21 +132,32 @@ body {
 
 .chatbubble-question {
   padding: 12px;
-  width: 80%;
-  height: 120px;
-  background-color: yellow;
+  width: 90%;
+  font-size: 30px;
+  height: fit-content;
+  color: #fff;
+  background-color: #160D2F;
+  
 }
 
 .chatbubble-answer {
+  color: #fff;
   padding: 12px;
   margin: 20px;
-  width: 80%;
+  font-size: 30px;
+  width: 90%;
   height: fit-content;
-  background-color: green;
+  background-color: #2B4D8E;
 }
 
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
   .btn-text {
+    display: none !important;
+  }
+  .submit-button {
+    width: fit-content;
+  }
+  ::-webkit-scrollbar {
     display: none;
   }
 }
