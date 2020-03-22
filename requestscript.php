@@ -3,10 +3,10 @@
     $baseUrl = '';
     $requestUrl = $baseUrl.'';
     $sessionUrl = $baseUrl.'/v2/assistants/12345/sessions';
-    $clientId = $_POST['client_id'];
+    $sessionId = $_POST['session_id'];
+    header('Content-type: application/json');
     
-    
-    if($clientId != null && !empty($clientId)) {
+    if($sessionId != null && !empty($sessionId)) {
         $config = array(
             CURLOPT_URL => $requestUrl,
             CURLOPT_POST => true,
@@ -15,7 +15,7 @@
         echo makeRequest($config);
     } else {
         $params = $_POST;
-        $params['client_id'] = getClientId($config);
+        $params['session_id'] = getsessionId($config);
         $config = array(
             CURLOPT_URL => $requestUrl,
             CURLOPT_POST => true,
@@ -35,7 +35,7 @@
     }
 
 
-    function getClientId() {
+    function getsessionId() {
         $config = array(
             CURLOPT_URL => $sessionUrl,
             CURLOPT_POST => true
