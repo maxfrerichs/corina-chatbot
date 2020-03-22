@@ -77,7 +77,7 @@ submitButton.addEventListener("click", function() {
             createChatField(response.output.generic[0].text, "answer");
           } 
           if(response.output.generic[0].response_type == "suggestion") {
-            renderSuggestionField();
+            renderSuggestionField(response.output.generic[0].suggestions);
             console.log("suggestion detected!")
           }
           inputField.value = ""
@@ -106,6 +106,14 @@ function createChatField(input, chatbubbleType) {
 
 
 function renderSuggestionField(suggestions) {
-  let suggestionField = document.createElement("div");
-  
+  let suggestionRow = document.createElement("div");
+  chatField.append(suggestionRow);
+  suggestionRow.className = "suggestion-row";
+  suggestionRow.innerHTML = "<p class='suggestion-head'>Meintest du:</p><br></br>";
+  suggestions.forEach(function(element) {
+    let suggestionField = document.createElement("div");
+    suggestionField.className = "suggestion-field";
+    suggestionField.innerHTML = element.label
+    suggestionRow.append(suggestionField);
+  });
 }
