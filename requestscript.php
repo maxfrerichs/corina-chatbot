@@ -1,9 +1,11 @@
+<html>
 <?php
     $api_key = 'd-Pd1HsNUFruREq-PhyDgNeYlERExUbR69KukVkMz1lZ';
-    $baseUrl = '';
-    $requestUrl = $baseUrl.'';
-    $sessionUrl = $baseUrl.'/v2/assistants/12345/sessions';
+    $skill_id = 'f9a32bd3-0cce-441c-af2a-94bdddd1f469';
+    $baseUrl = "https://api.eu-de.assistant.watson.cloud.ibm.com/instances/80b729fa-6067-4885-9f02-ad6fecba0e1a/v2/assistants/$api_key";
     $sessionId = $_POST['session_id'];
+    $requestUrl = $baseUrl."/sessions/$sessionId/message?version=2020-02-05";
+    $sessionUrl = $baseUrl."/sessions?version=2020-02-05";
     header('Content-type: application/json');
     
     if($sessionId != null && !empty($sessionId)) {
@@ -12,7 +14,8 @@
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => $_POST
         );
-        echo makeRequest($config);
+        print_r($config, true);
+        echo json_encode(makeRequest($config));
     } else {
         $params = $_POST;
         $params['session_id'] = getsessionId($config);
@@ -21,7 +24,8 @@
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => $params
         );
-        echo makeRequest($config);
+        print_r($config, true);
+        echo json_encode(makeRequest($config));
     }
     
     function makeRequest($config) {
@@ -35,7 +39,7 @@
     }
 
 
-    function getsessionId() {
+    function getsessionId($config) {
         $config = array(
             CURLOPT_URL => $sessionUrl,
             CURLOPT_POST => true
@@ -43,3 +47,4 @@
         return makeRequest($config);
     }
 ?>
+</html>
