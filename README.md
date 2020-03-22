@@ -10,7 +10,6 @@ so vielen Bürgern wie möglich Zugang zu Informationen zu verschaffen, ohne dab
 * Der Bot wurde mit IBM Watson, einer Plattform für Natural Language Processing, Machine Learning etc., entwickelt und trainiert
 * Der Client wurde klassisch mit HTML, CSS, JavaScript und PHP entwickelt. Ziel ist es, einer so breiten Masse an Entwicklern
   möglich die Teilnahme am Projekt zu ermöglichen. 
-*
 
 ## Allgemeine Features
 * Inhalte können auch in Leichter Sprache ausgegeben werden. 
@@ -24,7 +23,6 @@ so vielen Bürgern wie möglich Zugang zu Informationen zu verschaffen, ohne dab
 ## Probleme
 * Aktuell gibt es Probleme beim Deployment auf einem eigenen Server (siehe Issue)
 * Tastennavigation nicht optimal.
-* 
 
 ## Geplante / mögliche Features
 ### Backend
