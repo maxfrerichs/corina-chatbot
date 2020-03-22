@@ -4,6 +4,14 @@ let chatField = document.querySelector(".chatbot-window");
 let sessionID;
 let formData;
 
+let vh = window.innerHeight * 0.01;
+document.querySelector("body").style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.querySelector("body").style.setProperty('--vh', `${vh}px`);  
+});
+
 
 window.onload = function() {
   let request = new XMLHttpRequest();
@@ -91,6 +99,7 @@ function createChatField(input, chatbubbleType) {
   if(chatbubbleType === "answer") {
     chatBubble.className = "chatbubble-answer"
   }
+  chatBubble.setAttribute("lang", "de");
   chatBubble.innerHTML = input
   chatField.append(chatBubble);
 }
