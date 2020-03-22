@@ -1,4 +1,4 @@
-# Corina-Chatbot (#WirVsVirus)
+# Corina-Chatbot (#WirVsVirus-Hackathon)
 
 ## Was ist das? 
 Corina ist ein Chatbot, entwickelt um Bürgern Fragen rund um Covid-19 bzw. das Corona-Virus zu beantworten. Das Ziel ist es, 
@@ -13,22 +13,26 @@ so vielen Bürgern wie möglich Zugang zu Informationen zu verschaffen, ohne dab
 
 ## Allgemeine Features
 * Inhalte können auch in Leichter Sprache ausgegeben werden. 
-* Barrierefreiheit wurde optimiert, durch große Schriften, einer einfachen Bedienung und 
-
+* Fragen können in einem Dialog beantwortet werden 
 
 ## Client-Features: 
 * Screenreader-Support optimiert
-* Einfache Integration als Stand-Alone 
+* Einfache Integration
+* Fokus auf Barrierefreiheit / Performance
 
 ## Probleme
-* Aktuell gibt es Probleme beim Deployment auf einem eigenen Server (siehe Issue)
+* Aktuell gibt es Probleme beim Deployment auf einem öffentlich zugänglichen Server (siehe Issue). Auf einem lokalen Server     läuft der Client aber problemlos. 
 * Tastennavigation nicht optimal.
 
 ## Geplante / mögliche Features
 ### Backend
   * Integration eines Crawlers, der Informationen von vertrauenswürdigen Quellen
   * Eigenes Backend für Redakteure, um Content einzupflegen
-  
+
+### Setup: 
+  * Du willst den Bot weiterentwickeln? Super! Klone dir einfach das Repository.
+  Voraussetzungen
+
 ### Frontend
   * Optimierung der Barrierefreiheit durch Implementierung eines "High Contrast"-Modus
   * Erstellen einer Progressive Web App, sodass Bürger*innen noch schneller Zugriff bekommen können
