@@ -1,6 +1,6 @@
 <?php
 
-$input = $_POST["message"];
+$input = $_POST["input"];
 $session_id = $_POST["session_id"];
 $assistant_id = '4b46be48-5aca-411f-ab3d-a800f4f62891';
 
