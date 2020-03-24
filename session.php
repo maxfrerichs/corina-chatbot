@@ -2,7 +2,9 @@
 
 $assistant_id = '4b46be48-5aca-411f-ab3d-a800f4f62891';
 $baseURL = "https://api.eu-de.assistant.watson.cloud.ibm.com/instances/80b729fa-6067-4885-9f02-ad6fecba0e1a/v2/assistants/$assistant_id";
-$api_key = "d-Pd1HsNUFruREq-PhyDgNeYlERExUbR69KukVkMz1lZ";
+
+// API-Key gibts nur auf Anfrage!
+$api_key = "";
 $sessionUrl = $baseURL."/sessions?version=2020-02-05";
 
 
