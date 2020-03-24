@@ -40,15 +40,16 @@ WICHTIG: Dieser Client ist NICHT voll funktionsfähig, viel mehr soll er eine Ma
 
 ## Geplante / mögliche Features
 ### Backend
-  * Integration eines Crawlers, der Informationen von vertrauenswürdigen Quellen
+  * Integration eines Crawlers, der Informationen von vertrauenswürdigen Quellen beschafft
   * Eigenes Backend für Redakteure, um Content einzupflegen
 
 ### Frontend
-  * Optimierung der Barrierefreiheit durch Implementierung eines "High Contrast"-Modus
+  * Optimierung der Barrierefreiheit durch Implementierung eines "High Contrast"-Modus, umfangreiches Testen mit                 Screenreadern und Implementierung von Unterstützung für besondere Eingabegeräte
   * Erstellen einer Progressive Web App, sodass Bürger*innen noch schneller Zugriff bekommen können
   
 ### Sonstiges
   * Integration in ein Content-Management-System, etwa als WordPress-Plugin oder auch als TYPO3-Extension. Sinnvoll u.a. für
     verschiedene Webseite wie z.B. der des Gesundheitsministeriums
-  * Weiterentwicklung zur Smartphone-App
+  * Entwicklung einer Smartphone-App
+  * 
  
